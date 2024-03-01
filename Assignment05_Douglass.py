@@ -42,7 +42,29 @@ def main():
         9.) Power of a Number
         10.) Type of Argument"""))
         
-        
+        if choice == 1:
+            
+            
+        elif choice == 2:
+            
+        elif choice == 3:
+            
+        elif choice == 4:
+            
+        elif choice == 5:
+            
+        elif choice == 6:
+            
+        elif choice == 7:
+            
+        elif choice == 8:
+            
+        elif choice == 9:
+            
+        elif choice == 10:
+            
+        else:
+            print("INVALID RESPONSE")
 
 
 
