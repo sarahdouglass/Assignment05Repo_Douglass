@@ -2,6 +2,7 @@
 
 class BasicMathOperations:
     
+    
     def GreetUser(first_name,last_name):
         
     def AddNumbers(number1,number2):
@@ -24,5 +25,24 @@ class BasicMathOperations:
         
     def ArgumentType(argument):
         
-        
-        
+def main():
+    user = BasicMathOperations()
+    answer = input("Hello! Welcome to Python, I have a set of questions and operations to share with you, do you want to hear them? Please enter Y for yes and N for no:")
+    
+    if answer == 'Y':
+
+
+
+
+
+
+
+
+
+    elif answer == 'N':
+        print("Rude.")  
+    else:
+        print("Invalid Answer!!!!")
+
+
+main()        
