@@ -13,6 +13,16 @@ class BasicMathOperations:
     def Factorial(number)
     
     def Counting(start_number,end_number):
+          
+    def calculateHypotenuse():
         
+        def calculateSquare():
     
+    def RectangeArea(width,length):
+        
+    def PowerNumber(number):
+        
+    def ArgumentType(argument):
+        
+        
         
