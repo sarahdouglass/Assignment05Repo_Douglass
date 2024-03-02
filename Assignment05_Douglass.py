@@ -4,10 +4,25 @@ class BasicMathOperations:
     
     def GreetUser(first_name,last_name):
         print(f"Hello {first_name} {last_name}, welcome to Assignment 05!")
+        
     def AddNumbers(number1,number2):
         num_sum = number1 + number2
         print(f"The sum of {number1} and {number2} is {num_sum}.")
+        
     def PerformOperations(num1,num2,operator):
+        if num1 < num2:
+            num1,num2 = num2,num1
+        if operation == 'd':
+            quotient = num1/num2
+            return quotient
+        elif operation == 'm':
+            product = num1*num2
+            return product
+        elif operation == 'a':
+            num_sum = num1 + num2
+        elif operation == 's':
+            difference = num1 - num2
+            return difference
         
     def SquareNumber(number):
         
@@ -43,17 +58,20 @@ def main():
         10.) Type of Argument"""))
         
         if choice == 1:
-            firstname = input("Please enter your first name.")
-            lastname = input("Please enter your last name.")
+            firstname = input("Please enter your first name:")
+            lastname = input("Please enter your last name:")
             GreetUser(firstname,lastname)
             
         elif choice == 2:
-            number1 = float(input("Please enter a number."))
-            number2 = float(input("Please enter another number."))
+            number1 = float(input("Please enter a number:"))
+            number2 = float(input("Please enter another number:"))
             AddNumbers(number1,number2)
             
         elif choice == 3:
-            
+            number1 = float(input("Please enter a number."))
+            number2 = float(input("Please enter another number."))
+            operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
+            print(f"The answer using your desired operation is {PerformOperations(number1,number2,operation)}")
         elif choice == 4:
             
         elif choice == 5:
