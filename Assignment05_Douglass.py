@@ -36,11 +36,17 @@ class BasicMathOperations:
     def Counting(start_number,end_number):
         count_list = list(start_number,end_number)
         return count_list
-          
-    def calculateHypotenuse():
+    
+    def calculateSquare(number): 
+        return number**2
         
-        def calculateSquare():
-                
+    def calculateHypotenuse(base,perpendicular):
+        square_base = calculateSquare(base)
+        square_perp = calculateSquare(perpendicular)
+        square_hypo = square_base + square_perp
+        hypo = (square_hypo)**0.5
+        return hypo   
+    
     def RectangeArea(width,length):
         
     def PowerNumber(number):
