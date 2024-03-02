@@ -4,7 +4,7 @@ class BasicMathOperations:
     
     
     def GreetUser(first_name,last_name):
-        
+        print(f"Hello {first_name} {last_name}, welcome to Assignment 05!")
     def AddNumbers(number1,number2):
         
     def PerformOperations(num1,num2,operator):
