@@ -25,11 +25,14 @@ class BasicMathOperations:
             return difference
         
     def SquareNumber(number):
-            answer = (number)**0.5
-            return answer
+        answer = (number)**0.5
+        return answer
          
     def Factorial(number):
-    
+        for i in range(1,n+1):
+            number = number*i
+        return number
+        
     def Counting(start_number,end_number):
           
     def calculateHypotenuse():
@@ -83,6 +86,8 @@ def main():
                 print("Invalid response, cannot square a negative number or zero!")
             
         elif choice == 5:
+            number = int(input("Please enter an integer, this program will find its factorial:"))
+            print(f"The factorial is {Factorial(number)}")
             
         elif choice == 6:
             
