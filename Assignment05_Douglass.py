@@ -40,13 +40,15 @@ class BasicMathOperations:
     def calculateHypotenuse():
         
         def calculateSquare():
-    
+                
     def RectangeArea(width,length):
         
     def PowerNumber(number):
         
     def ArgumentType(argument):
-        
+        arg = type(argument)
+        return arg
+    
 def main():
     user = BasicMathOperations()
     answer = input("Hello! Welcome to Python, I have a set of questions and operations to share with you, do you want to hear them? Please enter Y for yes and N for no:")
@@ -103,6 +105,8 @@ def main():
         elif choice == 9:
             
         elif choice == 10:
+            argument = input("Please enter any variable, the type will be returned:")
+            print(f"The type is {ArgumentType(argument)}")
             
         else:
             print("INVALID RESPONSE")
