@@ -43,7 +43,9 @@ def main():
         10.) Type of Argument"""))
         
         if choice == 1:
-            
+            firstname = input("Please enter your first name.")
+            lastname = input("Please enter your last name.")
+            GreetUser(firstname,lastname)
             
         elif choice == 2:
             
