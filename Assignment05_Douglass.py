@@ -86,12 +86,12 @@ def main():
             number1 = float(input("Please enter a number."))
             number2 = float(input("Please enter another number."))
             operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
-            print(f"\nThe answer using your desired operation is {PerformOperations(number1,number2,operation)}")
+            print(f"\nThe answer using your desired operation is {PerformOperations(number1,number2,operation):.2f}")
             
         elif choice == 4:
             number = float(input("Please enter the number you would like squared:"))
             if number > 0:
-                print(f"The answer is {SquareNumber(number)}")
+                print(f"The answer is {SquareNumber(number):.2f}")
             else:
                 print("Invalid response, cannot square a negative number or zero!")
             
@@ -105,6 +105,9 @@ def main():
             print(f"\nStarting from {start} and ending at {end}, your count is {Counting(start,end)}")
             
         elif choice == 7:
+            base = float(input("Please enter the value of the base of the right-angle triangle:"))
+            perpendicular = float(input("Please enter the value of the perpendicular of the right-angle triangle:"))
+            print(f" The value of the Hypotenuse is {calculateHypothesis(base,perpendicular):.2f}")
             
         elif choice == 8:
             
