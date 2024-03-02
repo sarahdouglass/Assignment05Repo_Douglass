@@ -25,8 +25,10 @@ class BasicMathOperations:
             return difference
         
     def SquareNumber(number):
-        
-    def Factorial(number)
+            answer = (number)**0.5
+            return answer
+         
+    def Factorial(number):
     
     def Counting(start_number,end_number):
           
@@ -71,8 +73,14 @@ def main():
             number1 = float(input("Please enter a number."))
             number2 = float(input("Please enter another number."))
             operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
-            print(f"The answer using your desired operation is {PerformOperations(number1,number2,operation)}")
+            print(f"\nThe answer using your desired operation is {PerformOperations(number1,number2,operation)}")
+            
         elif choice == 4:
+            number = float(input("Please enter the number you would like squared:"))
+            if number > 0:
+                print(f"The answer is {SquareNumber(number)}")
+            else:
+                print("Invalid response, cannot square a negative number or zero!")
             
         elif choice == 5:
             
