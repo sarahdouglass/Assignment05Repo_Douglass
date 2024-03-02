@@ -2,11 +2,11 @@
 
 class BasicMathOperations:
     
-    
     def GreetUser(first_name,last_name):
         print(f"Hello {first_name} {last_name}, welcome to Assignment 05!")
     def AddNumbers(number1,number2):
-        
+        num_sum = number1 + number2
+        print(f"The sum of {number1} and {number2} is {num_sum}.")
     def PerformOperations(num1,num2,operator):
         
     def SquareNumber(number):
@@ -48,6 +48,9 @@ def main():
             GreetUser(firstname,lastname)
             
         elif choice == 2:
+            number1 = float(input("Please enter a number."))
+            number2 = float(input("Please enter another number."))
+            AddNumbers(number1,number2)
             
         elif choice == 3:
             
