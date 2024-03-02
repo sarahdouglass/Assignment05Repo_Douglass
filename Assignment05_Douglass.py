@@ -34,6 +34,8 @@ class BasicMathOperations:
         return number
         
     def Counting(start_number,end_number):
+        count_list = list(start_number,end_number)
+        return count_list
           
     def calculateHypotenuse():
         
@@ -90,6 +92,9 @@ def main():
             print(f"The factorial is {Factorial(number)}")
             
         elif choice == 6:
+            start = int(input("Please enter the starting number:"))
+            end = int(input("Please enter the ending number:"))
+            print(f"\nStarting from {start} and ending at {end}, your count is {Counting(start,end)}")
             
         elif choice == 7:
             
