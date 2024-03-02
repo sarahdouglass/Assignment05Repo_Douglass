@@ -49,8 +49,10 @@ class BasicMathOperations:
     
     def RectangeArea(width,length):
         
-    def PowerNumber(number):
-        
+    def PowerNumber(base,exponent):
+        power = base**exponent
+        return power
+    
     def ArgumentType(argument):
         arg = type(argument)
         return arg
@@ -111,7 +113,11 @@ def main():
             
         elif choice == 8:
             
+            
         elif choice == 9:
+            base = float(input("Please enter the base number:"))
+            exponent = float(input("Please enter the exponent number:"))
+            print(f"The power based on a base of {base} and an exponent of {exponent} is {PowerNumber(base,exponent):.2f}")
             
         elif choice == 10:
             argument = input("Please enter any variable, the type will be returned:")
@@ -119,11 +125,6 @@ def main():
             
         else:
             print("INVALID RESPONSE")
-
-
-
-
-
 
     elif answer == 'N':
         print("Rude.")  
