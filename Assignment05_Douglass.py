@@ -38,49 +38,52 @@ def main():
                 operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
                 print(f"\nThe answer using your desired operation is {user.PerformOperations(number1,number2,operation):.2f}") #implement method using fstring print
                 
-            elif choice == 4:
+            elif choice == 4: #Squaring Numbers
                 number = float(input("Please enter the number you would like squared:"))
-                if number > 0:
+                
+                if number > 0: #if number is not negative or zero(as root would be imaginary or just 0), implement the method
                     print(f"The answer is {user.SquareNumber(number):.2f}")
                 else:
                     print("Invalid response, cannot square a negative number or zero!")
                 
-            elif choice == 5:
+            elif choice == 5: #Factorial
                 number = int(input("Please enter an integer, this program will find its factorial:"))
-                print(f"The factorial is {user.Factorial(number)}")
+                print(f"The factorial is {user.Factorial(number)}") #implement method
                 
-            elif choice == 6:
+            elif choice == 6: #Counting
                 start = int(input("Please enter the starting number:"))
                 end = int(input("Please enter the ending number:"))
-                print(f"\nStarting from {start} and ending at {end}, your count is {user.Counting(start,end)}")
+                print(f"\nStarting from {start} and ending at {end}, your count is {user.Counting(start,end)}") #implement method
                 
-            elif choice == 7:
+            elif choice == 7: #Computing Hypotenuse
                 base = float(input("Please enter the value of the base of the right-angle triangle:"))
                 perpendicular = float(input("Please enter the value of the perpendicular of the right-angle triangle:"))
-                print(f" The value of the Hypotenuse is {user.calculateHypothesis(base,perpendicular):.2f}")
+                print(f" The value of the Hypotenuse is {user.calculateHypothesis(base,perpendicular):.2f}") #implement method
                 
-            elif choice == 8:
+            elif choice == 8: #AreaRectangle
                 width = float(input("Please enter the width of the rectangle:"))
                 length = float(input("Please enter the length of the rectangle:"))
-                print(f"The area of the rectangle is {user.RectangleArea(width,length):.2f}")
+                print(f"The area of the rectangle is {user.RectangleArea(width,length):.2f}") #implement method
                 
-            elif choice == 9:
+            elif choice == 9: #Power
                 base = float(input("Please enter the base number:"))
                 exponent = float(input("Please enter the exponent number:"))
-                print(f"The power based on a base of {base} and an exponent of {exponent} is {user.PowerNumber(base,exponent):.2f}")
+                print(f"The power based on a base of {base} and an exponent of {exponent} is {user.PowerNumber(base,exponent):.2f}") #implement method
                 
-            elif choice == 10:
+            elif choice == 10: #ArgumentType
                 argument = input("Please enter any variable, the type will be returned:")
-                print(f"The type is {user.ArgumentType(argument)}")
+                print(f"The type is {user.ArgumentType(argument)}") #implement method
                 
-            else:
-                print("INVALID RESPONSE")
+            else: #if none of the numbers are selected
+                print("INVALID RESPONSE") 
 
-        elif answer == 'N':
+        elif answer == 'N': #if N is chosen rather than Y
             print("Rude.")  
-        else:
-            print("Invalid Answer!!!!")
             
+        else: #if neither N nor Y is chosen
+            print("Invalid Answer!!!!")
+        
+        #attached to the while statement, if the user indicated N, the program stops
         response = input("Would you like to try another task? Yes(Y) or No(N)?")   
         
 
@@ -116,7 +119,7 @@ class BasicMathOperations:
             
     @staticmethod
     def SquareNumber(number):
-        answer = number**0.5
+        answer = number**2
         return answer
 
     @staticmethod
