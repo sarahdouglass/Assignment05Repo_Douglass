@@ -33,8 +33,8 @@ def main():
                 user.AddNumbers(number1,number2) #implement method
                 
             elif choice == 3: #Operations
-                number1 = float(input("Please enter a number.")) #floats used to allow for a wider scope of numbers and calculations
-                number2 = float(input("Please enter another number."))
+                number1 = float(input("Please enter a number:")) #floats used to allow for a wider scope of numbers and calculations
+                number2 = float(input("Please enter another number:"))
                 operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
                 print(f"\nThe answer using your desired operation is {user.PerformOperations(number1,number2,operation):.2f}") #implement method using fstring print
                 
@@ -58,7 +58,7 @@ def main():
             elif choice == 7: #Computing Hypotenuse
                 base = float(input("Please enter the value of the base of the right-angle triangle:"))
                 perpendicular = float(input("Please enter the value of the perpendicular of the right-angle triangle:"))
-                print(f" The value of the Hypotenuse is {user.calculateHypothesis(base,perpendicular):.2f}") #implement method
+                print(f" The value of the Hypotenuse is {user.calculateHypotenuse(base,perpendicular):.2f}") #implement method
                 
             elif choice == 8: #AreaRectangle
                 width = float(input("Please enter the width of the rectangle:"))
@@ -84,7 +84,7 @@ def main():
             print("Invalid Answer!!!!")
         
         #attached to the while statement, if the user indicated N, the program stops
-        response = input("Would you like to try another task? Yes(Y) or No(N)?")   
+        response = input("\nWould you like to try another task? Yes(Y) or No(N)?")   
         
 
 class BasicMathOperations:
