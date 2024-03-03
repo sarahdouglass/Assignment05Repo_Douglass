@@ -135,7 +135,7 @@ class BasicMathOperations:
 
     @staticmethod
     def calculateHypotenuse(base, perpendicular):
-        def calculateSquare(number):
+        def calculateSquare(number): #method inside the hypotenuse method so it can be used within
             return number ** 2
 
         square_base = calculateSquare(base)
@@ -150,14 +150,14 @@ class BasicMathOperations:
         return area
 
     @staticmethod
-    def PowerNumber(base, exponent):
+    def PowerNumber(base, exponent): #taking a base and exponent and finding the value (power) 
         power = base ** exponent
         return power
 
     @staticmethod
     def ArgumentType(argument):
-        arg = type(argument)
+        arg = type(argument) #using the built-in type function to find the type of an argument
         return arg
     
     
-main()        
+main()  #invoke main
