@@ -89,7 +89,7 @@ def main():
 
 class BasicMathOperations:
     
-    @staticmethod
+    @staticmethod #allows the methods to pull from the class without modifying an object or instance
     def GreetUser(first_name, last_name):
         print(f"Hello {first_name} {last_name}, welcome to Assignment 05!")
 
@@ -99,10 +99,10 @@ class BasicMathOperations:
         print(f"The sum of {number1} and {number2} is {num_sum}.")
 
     @staticmethod
-    def PerformOperations(num1, num2, operator):
+    def PerformOperations(num1, num2, operator): #if the user inputs associated letter, operation runs
         if num1 < num2:
             num1, num2 = num2, num1
-        if operator == 'd' and num2 != 0:
+        if operator == 'd' and num2 != 0: #only calcultes the quotient if the denominator is not zero
             quotient = num1 / num2
             return quotient
         elif operator == 'm':
@@ -114,23 +114,23 @@ class BasicMathOperations:
         elif operator == 's':
             difference = num1 - num2
             return difference
-        else:
-            print("Invalid response.")
+        else: #if none of the letters are entered, error message is printed
+            return "Invalid response." 
             
     @staticmethod
     def SquareNumber(number):
         answer = number**2
-        return answer
+        return answer 
 
     @staticmethod
     def Factorial(number):
-        for i in range(1, number + 1):
+        for i in range(1, number): #for loop to find factorial for an input number
             number = number * i
         return number
 
     @staticmethod
     def Counting(start_number, end_number):
-        count_list = list(range(start_number, end_number + 1))
+        count_list = list(range(start_number, end_number + 1)) #end number + 1 to include the end number in the range
         return count_list
 
     @staticmethod
