@@ -1,11 +1,15 @@
 #Assignment 05
+
 def main():
-    user = BasicMathOperations()
-    response = 0
+    
+    user = BasicMathOperations()  #intial object, allows for the methods in the class to be implemented
+    response = 0 #initialize response for while statement
+    
     answer = input("Hello! Welcome to Python, I have a set of questions and operations to share with you, do you want to hear them? Please enter Y for yes and N for no:")
     
-    while response != 'N': 
-        if answer == 'Y':
+    while response != 'N':
+        
+        if answer == 'Y': #Allow user to choose a task from the ones listed, each corresponds to one of the required problems
             choice = int(input("""\nGreat Choice! Here are your options, please enter the number of the prompt you'd like to interact with:\n
     1.) Greet User  
     2.) Add Numbers
@@ -18,21 +22,21 @@ def main():
     9.) Power of a Number
     10.) Type of Argument\n"""))
             
-            if choice == 1:
+            if choice == 1: #Greet User
                 firstname = input("Please enter your first name:")
                 lastname = input("Please enter your last name:")
-                user.GreetUser(firstname,lastname)
+                user.GreetUser(firstname,lastname) #implement method
                 
-            elif choice == 2:
+            elif choice == 2: #Add Numbers
                 number1 = float(input("Please enter a number:"))
                 number2 = float(input("Please enter another number:"))
-                user.AddNumbers(number1,number2)
+                user.AddNumbers(number1,number2) #implement method
                 
-            elif choice == 3:
-                number1 = float(input("Please enter a number."))
+            elif choice == 3: #Operations
+                number1 = float(input("Please enter a number.")) #floats used to allow for a wider scope of numbers and calculations
                 number2 = float(input("Please enter another number."))
                 operation = input("Next you need to enter an operation. Your options are addition(a), subtraction(s), multiplication(m), division(d), please enter one:")
-                print(f"\nThe answer using your desired operation is {user.PerformOperations(number1,number2,operation):.2f}")
+                print(f"\nThe answer using your desired operation is {user.PerformOperations(number1,number2,operation):.2f}") #implement method using fstring print
                 
             elif choice == 4:
                 number = float(input("Please enter the number you would like squared:"))
@@ -107,7 +111,9 @@ class BasicMathOperations:
         elif operator == 's':
             difference = num1 - num2
             return difference
-
+        else:
+            print("Invalid response.")
+            
     @staticmethod
     def SquareNumber(number):
         answer = number**0.5
