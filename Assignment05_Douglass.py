@@ -4,17 +4,17 @@ def main():
     answer = input("Hello! Welcome to Python, I have a set of questions and operations to share with you, do you want to hear them? Please enter Y for yes and N for no:")
     
     if answer == 'Y':
-        choice = int(input("""Great Choice! Here are your options, please enter the number of the prompt you'd like to interact with:
-        1.) Greet User  
-        2.) Add Numbers
-        3.) Perform Operation
-        4.) Square Numbers
-        5.) Factorial
-        6.) Counting
-        7.) Computing Hypotenuse
-        8.) Area of Rectangle
-        9.) Power of a Number
-        10.) Type of Argument"""))
+        choice = int(input("""\nGreat Choice! Here are your options, please enter the number of the prompt you'd like to interact with:\n
+1.) Greet User  
+2.) Add Numbers
+3.) Perform Operation
+4.) Square Numbers
+5.) Factorial
+6.) Counting
+7.) Computing Hypotenuse
+8.) Area of Rectangle
+9.) Power of a Number
+10.) Type of Argument\n"""))
         
         if choice == 1:
             firstname = input("Please enter your first name:")
@@ -77,21 +77,24 @@ def main():
         
 class BasicMathOperations:
     
-    def GreetUser(first_name,last_name):
+    @staticmethod
+    def GreetUser(first_name, last_name):
         print(f"Hello {first_name} {last_name}, welcome to Assignment 05!")
-        
-    def AddNumbers(number1,number2):
+
+    @staticmethod
+    def AddNumbers(number1, number2):
         num_sum = number1 + number2
         print(f"The sum of {number1} and {number2} is {num_sum}.")
-        
-    def PerformOperations(num1,num2,operator):
+
+    @staticmethod
+    def PerformOperations(num1, num2, operator):
         if num1 < num2:
-            num1,num2 = num2,num1
-        if operator == 'd':
-            quotient = num1/num2
+            num1, num2 = num2, num1
+        if operator == 'd' and num2 != 0:
+            quotient = num1 / num2
             return quotient
         elif operator == 'm':
-            product = num1*num2
+            product = num1 * num2
             return product
         elif operator == 'a':
             num_sum = num1 + num2
@@ -99,38 +102,45 @@ class BasicMathOperations:
         elif operator == 's':
             difference = num1 - num2
             return difference
-        
+
+    @staticmethod
     def SquareNumber(number):
-        answer = (number)**0.5
+        answer = number**0.5
         return answer
-         
+
+    @staticmethod
     def Factorial(number):
-        for i in range(1,number + 1):
-            number = number*i
+        for i in range(1, number + 1):
+            number = number * i
         return number
-        
-    def Counting(start_number,end_number):
-        count_list = list(start_number,end_number)
+
+    @staticmethod
+    def Counting(start_number, end_number):
+        count_list = list(range(start_number, end_number + 1))
         return count_list
-        
-    def calculateHypotenuse(base,perpendicular):
-        
-        def calculateSquare(number): 
-            return number**2
+
+    @staticmethod
+    def calculateHypotenuse(base, perpendicular):
+        def calculateSquare(number):
+            return number ** 2
+
         square_base = calculateSquare(base)
         square_perp = calculateSquare(perpendicular)
         square_hypo = square_base + square_perp
         hypo = (square_hypo)**0.5
-        return hypo   
-    
-    def RectangeArea(width,length):
-        area = width*length
+        return hypo
+
+    @staticmethod
+    def RectangleArea(width, length):
+        area = width * length
         return area
-        
-    def PowerNumber(base,exponent):
-        power = base**exponent
+
+    @staticmethod
+    def PowerNumber(base, exponent):
+        power = base ** exponent
         return power
-    
+
+    @staticmethod
     def ArgumentType(argument):
         arg = type(argument)
         return arg
