@@ -112,11 +112,11 @@ class BasicMathOperations:
     def Counting(start_number,end_number):
         count_list = list(start_number,end_number)
         return count_list
-    
-    def calculateSquare(number): 
-        return number**2
         
     def calculateHypotenuse(base,perpendicular):
+        
+        def calculateSquare(number): 
+            return number**2
         square_base = calculateSquare(base)
         square_perp = calculateSquare(perpendicular)
         square_hypo = square_base + square_perp
