@@ -156,8 +156,25 @@ class BasicMathOperations:
 
     @staticmethod
     def ArgumentType(argument):
-        arg = type(argument) #using the built-in type function to find the type of an argument
-        return arg
+        arg = eval(argument)
+        if isinstance(arg, int):
+            return "integer"
+        elif isinstance(arg, str): #only reads string is quotes are around the input word
+            return "string"
+        elif isinstance(arg, float):
+            return "float"
+        elif isinstance(arg, bool):
+            return "boolean"
+        elif isinstance(arg, tuple):
+            return "tuple"
+        elif isinstance(arg, list):
+            return "list"
+        elif isinstance(arg, set):
+            return "set"
+        elif isinstance(arg, dict):
+            return "dict"
+
+        return "unknown"
     
     
 main()  #invoke main
