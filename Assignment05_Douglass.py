@@ -40,11 +40,8 @@ def main():
                 
             elif choice == 4: #Squaring Numbers
                 number = float(input("Please enter the number you would like squared:"))
-                
-                if number > 0: #if number is not negative or zero(as root would be imaginary or just 0), implement the method
-                    print(f"The answer is {user.SquareNumber(number):.2f}")
-                else:
-                    print("Invalid response, cannot square a negative number or zero!")
+                print(f"The answer is {user.SquareNumber(number):.2f}")
+
                 
             elif choice == 5: #Factorial
                 number = int(input("Please enter an integer, this program will find its factorial:"))
